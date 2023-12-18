@@ -1,0 +1,33 @@
+:host {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host.top-left {
+    top: 20px;
+
+    left: 0px;
+
+}
+
+:host.top-right {
+    top: 20px;
+    right: 0px;
+
+}
+
+:host.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+:host.bottom-right {
+    bottom: 0;
+    right: 0;
+}
