@@ -1,17 +1,29 @@
-<p>user-profile works!</p>
 
 
-<div>
-    <img [src]="user.photo" alt="User Photo">
-    <div>
-      <label for="quote">Quote:</label>
-      <input type="text" id="quote" [(ngModel)]="user.quote">
-    </div>
-    <div *ngIf="!hideAge">Age: {{ user.age }}</div>
-    <div>Name: {{ user.name }}</div>
-    <div>First Name: {{ user.firstName }}</div>
-    <button (click)="toggleAgeVisibility()">Toggle Age</button>
+
+<div class="profile-panel">
+
+  <img [src]="user.photo" alt="User Photo">
+ 
+  <div> <strong> Name: {{ user.name }} </strong> </div>
+  <div><strong> First Name: {{ user.firstName }} </strong> </div>
+  <div *ngIf="!hideAge">Age: {{ user.age }}</div>
+
+
+  <div>
+    <p>{{ user.quote }}</p>
+    <label for="quote">Quote:</label>
+    <input type="text" id="quote" [(ngModel)]="user.quote">
   </div>
 
+  <div class="button-panel">
+    <div class="button"> <button (click)="toggleAgeVisibility()">Afficher/Masque mon âge </button></div>
+   
+  </div>
+
+
   
-  
+
+
+
+</div>
